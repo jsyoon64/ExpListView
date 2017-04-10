@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         listMain = (ExpandableListView) this.findViewById(R.id.expandableListView1);
         setArrayData();
+        listMain.setAdapter(new AdaptorMain(this,arrayGroup,arrayChild));
     }
 
     private void setArrayData() {
