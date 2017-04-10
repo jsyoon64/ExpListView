@@ -58,7 +58,7 @@ public class AdaptorMain extends BaseExpandableListAdapter {
     }
     @Override
     public boolean isChildSelectable(int groupPosition,int childPosition){
-        return false;
+        return true;
     }
 
     // Adaptor에 필요한 getGroupView와 getChildView methods

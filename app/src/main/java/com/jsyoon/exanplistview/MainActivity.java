@@ -2,7 +2,9 @@ package com.jsyoon.exanplistview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
         listMain = (ExpandableListView) this.findViewById(R.id.expandableListView1);
         setArrayData();
         listMain.setAdapter(new AdaptorMain(this,arrayGroup,arrayChild));
+        listMain.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                String text = arrayChild.get(arrayGroup.get(groupPosition)).get(childPosition);
+                Toast.makeText(MainActivity.this,text,Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
     }
 
     private void setArrayData() {
