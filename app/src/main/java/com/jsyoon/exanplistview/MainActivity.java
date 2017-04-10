@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         arrayGroup.add("피자");
         arrayGroup.add("치킨");
         arrayGroup.add("중국집");
+        arrayGroup.add("기타");
 
         ArrayList<String> arrayPizza = new ArrayList<String>();
         arrayPizza.add("치즈");
@@ -62,9 +63,12 @@ public class MainActivity extends AppCompatActivity {
         arrayChinese.add("탕수육");
         arrayChinese.add("불도장");
 
+        ArrayList<String> arrayEtc = new ArrayList<String>();
+
         arrayChild.put(arrayGroup.get(0),arrayPizza);
         arrayChild.put(arrayGroup.get(1),arrayChicken);
         arrayChild.put(arrayGroup.get(2),arrayChinese);
+        arrayChild.put(arrayGroup.get(3),arrayEtc);
 
     }
 }
